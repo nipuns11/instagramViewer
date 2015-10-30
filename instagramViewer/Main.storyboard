@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="scw-9U-pXv">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Insta View Controller-->
+        <scene sceneID="a6E-c2-eZx">
+            <objects>
+                <viewController id="scw-9U-pXv" customClass="InstaViewController" customModule="instagramViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vdl-Xd-Egy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ax1-e6-vFy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yru-ub-8x2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="214" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eSG-JT-Eul">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="instacell" rowHeight="214" id="07z-aE-HfA" customClass="InstaTableViewCell" customModule="instagramViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="214"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="07z-aE-HfA" id="SG2-7w-AyB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="213"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xg1-nR-fsK">
+                                                    <rect key="frame" x="16" y="8" width="584" height="197"/>
+                                                    <animations/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY1-wC-gDk" customClass="Insta">
+                                                    <rect key="frame" x="16" y="8" width="108" height="36"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="hge-Pg-1x4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Xg1-nR-fsK" secondAttribute="trailing" id="130-Qu-wXD"/>
+                                                <constraint firstItem="Xg1-nR-fsK" firstAttribute="leading" secondItem="yY1-wC-gDk" secondAttribute="leading" id="IlR-BQ-JUJ"/>
+                                                <constraint firstItem="Xg1-nR-fsK" firstAttribute="top" secondItem="yY1-wC-gDk" secondAttribute="top" id="TIy-d7-igZ"/>
+                                                <constraint firstItem="Xg1-nR-fsK" firstAttribute="bottom" secondItem="SG2-7w-AyB" secondAttribute="bottomMargin" id="wwM-JH-7xt"/>
+                                                <constraint firstItem="Xg1-nR-fsK" firstAttribute="leading" secondItem="SG2-7w-AyB" secondAttribute="leadingMargin" constant="8" id="zHT-vf-iis"/>
+                                                <constraint firstItem="Xg1-nR-fsK" firstAttribute="top" secondItem="SG2-7w-AyB" secondAttribute="topMargin" id="zxD-79-ZPa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="yY1-wC-gDk" id="Tlz-5x-BwX"/>
+                                            <outlet property="instaImage" destination="Xg1-nR-fsK" id="hnS-P9-rtK"/>
+                                            <outlet property="instaImageview" destination="Xg1-nR-fsK" id="ATF-IX-sOJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="scw-9U-pXv" id="OiP-Tw-qJq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eSG-JT-Eul" firstAttribute="bottom" secondItem="Ax1-e6-vFy" secondAttribute="top" id="I3Q-Se-F2Z"/>
+                            <constraint firstAttribute="trailing" secondItem="eSG-JT-Eul" secondAttribute="trailing" id="VXc-Qg-983"/>
+                            <constraint firstItem="eSG-JT-Eul" firstAttribute="top" secondItem="Vdl-Xd-Egy" secondAttribute="bottom" constant="8" symbolic="YES" id="ZYs-Up-VjX"/>
+                            <constraint firstItem="eSG-JT-Eul" firstAttribute="leading" secondItem="yru-ub-8x2" secondAttribute="leading" id="ybK-3K-zSe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="eSG-JT-Eul" id="q47-2m-XD3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lbq-tM-xpL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="584"/>
+        </scene>
+    </scenes>
+</document>
