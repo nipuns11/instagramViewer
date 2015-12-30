@@ -2,9 +2,7 @@
 //  InstaViewController.swift
 //  instagramViewer
 //
-//  Created by nipun sharma on 2015-10-28.
-//  Copyright © 2015 nipun. All rights reserved.
-//
+
 
 import UIKit
 import Alamofire
